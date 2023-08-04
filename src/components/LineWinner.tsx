@@ -2,7 +2,8 @@ import {
   diagonalVictoriousPositions,
   horizontalVictoriousPositions,
   verticalVictoriousPositions,
-} from "@tic-tac-toe/constants/positions";
+} from "@quarto-game/constants/positions";
+import { areSimilar } from "@quarto-game/utils/board";
 import { clsx } from "clsx";
 
 type LineWinnerProps = {
@@ -19,9 +20,7 @@ function generateLinePositions(board: string[]) {
           ? "bottom-1/2"
           : "bottom-[16.5%]";
       return {
-        [key]:
-          position.every((squareIndex) => board.at(squareIndex) === "X") ||
-          position.every((squareIndex) => board.at(squareIndex) === "O"),
+        [key]: areSimilar(board[position[0]], board[position[1]], board[position[2]], board[position[3]]),
       };
     }
   );
@@ -60,7 +59,7 @@ export function LineWinner({ board }: LineWinnerProps) {
   return (
     <div
       className={clsx(
-        "absolute h-0.5 bg-white animate-line",
+        "absolute h-0.5 bg-red animate-line",
         generateLinePositions(board)
       )}
     />

@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@tic-tac-toe": path.resolve(__dirname, "src"),
+      "@quarto-game": path.resolve(__dirname, "src"),
     },
   },
 });

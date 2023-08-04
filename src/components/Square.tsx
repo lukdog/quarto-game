@@ -4,25 +4,30 @@ import { clsx } from "clsx";
 type SquareProps = HTMLProps<HTMLButtonElement> & {
   value: string;
   index: number;
+  winnerPosition?: boolean;
+  indexesWithoutBorderRight: number[];
+  totalCount: number;
+  elemPerLine: number;
 };
 
-const indexesWithoutBorderRight = [3,7,11,15];
-
-export function Square({ value, disabled, index, ...props }: SquareProps) {
+export function Square({ value, disabled, index, selected, indexesWithoutBorderRight, totalCount, elemPerLine, ...props }: SquareProps) {
   return (
     <button
       className={clsx(
-        "w-24 h-24 font-bold text-4xl disabled:cursor-not-allowed",
+        "w-24 h-24 font-bold text-3xl disabled:cursor-not-allowed",
         {
           "border-b border-blue-500":
-            indexesWithoutBorderRight.includes(index) && index < 15,
+            indexesWithoutBorderRight.includes(index) && index < totalCount-1 && !selected && !props.winnerPosition,
         },
         {
-          "border-r border-blue-500": index > 11 && index < 15,
+          "border-r border-blue-500": index > totalCount-elemPerLine-1 && index < totalCount-1 && !selected && !props.winnerPosition,
         },
         {
           "border-r border-b border-blue-500":
-            !indexesWithoutBorderRight.includes(index) && index <= 11,
+            !indexesWithoutBorderRight.includes(index) && index <= totalCount-elemPerLine-1 && !selected && !props.winnerPosition,
+        },
+        {
+          "border-4 border-blue-500": selected || props.winnerPosition,
         }
       )}
       {...props}

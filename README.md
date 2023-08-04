@@ -2,7 +2,7 @@
 <p align="center">
   <img
     alt="Repository size"
-    src="https://img.shields.io/github/repo-size/fellipeutaka/tic-tac-toe"
+    src="https://img.shields.io/github/repo-size/fellipeutaka/quarto-game"
   />
   <a href="https://www.linkedin.com/in/fellipeutaka/">
     <img
@@ -10,20 +10,20 @@
       src="https://img.shields.io/badge/made%20by-Fellipe%20Utaka-%2304D361"
     />
   </a>
-  <a href="https://github.com/fellipeutaka/tic-tac-toe/commits/main">
+  <a href="https://github.com/fellipeutaka/quarto-game/commits/main">
     <img
       alt="GitHub last commit"
-      src="https://img.shields.io/github/last-commit/fellipeutaka/tic-tac-toe"
+      src="https://img.shields.io/github/last-commit/fellipeutaka/quarto-game"
     />
   </a>
   <img
     alt="License"
     src="https://img.shields.io/badge/license-MIT-brightgreen"
   />
-  <a href="https://github.com/fellipeutaka/tic-tac-toe/stargazers">
+  <a href="https://github.com/fellipeutaka/quarto-game/stargazers">
     <img
       alt="Stargazers"
-      src="https://img.shields.io/github/stars/fellipeutaka/tic-tac-toe?style=social"
+      src="https://img.shields.io/github/stars/fellipeutaka/quarto-game?style=social"
     />
   </a>
 </p>
@@ -39,7 +39,7 @@
 
 ## 💻 Project
 
-A offline tic-tac-toe game made with React and TailwindCSS.
+A offline quarto-game game made with React and TailwindCSS.
 
 <h1 align="center">
   <img alt="Preview" src=".github/preview.png" width="500px" />
@@ -63,7 +63,7 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/fellipeutaka/tic-tac-toe.git
+$ git clone https://github.com/fellipeutaka/quarto-game.git
 
 # Install dependencies
 # If you are using NPM
@@ -96,7 +96,7 @@ $ pnpm dev
 
 ## 📝 License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/fellipeutaka/tic-tac-toe/blob/main/LICENSE.md) for details.
+This project is under the MIT license. See the [LICENSE](https://github.com/fellipeutaka/quarto-game/blob/main/LICENSE.md) for details.
 
 Made with ♥ by Fellipe Utaka 👋 [Get in touch!](https://www.linkedin.com/in/fellipeutaka/)
 

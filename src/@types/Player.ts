@@ -1,1 +1,1 @@
-export type Player = "X" | "O";
+export type Player = "PlayerA" | "PlayerB";
