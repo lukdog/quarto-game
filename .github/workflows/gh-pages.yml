@@ -21,7 +21,7 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        uses: yarn ci
+        run: yarn ci
 
       - name: Build project
         run: yarn build
