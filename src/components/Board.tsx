@@ -21,7 +21,7 @@ export function Board() {
 
     const boardCopy = [...board];
     boardCopy[index] = pawns[pawn];
-    delete pawns[pawn];
+    pawns.splice(pawn, 1);
     setPawnIndex(-1);
     setBoard(boardCopy);
   }
@@ -81,7 +81,7 @@ export function Board() {
               onClick={() => handleChoosePawn(index)}
               indexesWithoutBorderRight={[7,15]}
               elemPerLine={8}
-              totalCount={16}
+              totalCount={pawns.length}
             />
           ))}
 

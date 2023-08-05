@@ -23,7 +23,7 @@ export function areSimilar(a: string, b: string, c: string, d: string){
   if(a === "" || b === "" || c === "" || d === "") return false;
 
   let similar = true;
-  for(let i= 0; i<a.length; i++ && !similar){
+  for(let i= 0; i<a.length && !similar; i++){
     b.indexOf(a[i]) !== -1 && c.indexOf(a[i]) !== -1 && d.indexOf(a[i]) !== -1 ? similar = true : similar = false;
   }
 
